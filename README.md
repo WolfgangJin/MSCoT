@@ -1,0 +1,2 @@
+# MSCoT
+Multilingual Structured CoT
