@@ -1,0 +1,1073 @@
+"Let's think step by step
+Input: operations: a list of deposit (positive numbers) and withdrawal (negative numbers) operations
+Output: a boolean value indicating whether the balance falls below zero at any point
+1: Initialize a variable balance to 0
+2: for each operation in operations:
+3:     Add the operation value to balance
+4:     if balance is less than 0:
+5:         return True
+6: return False"
+"Let's think step by step
+Input: numbers: a list of integers
+Output: a tuple consisting of a sum and a product of all the integers in the list
+1: Initialize two variables, sum and product, with values 0 and 1 respectively
+2: for each number in numbers:
+3:     Add the number to sum
+4:     Multiply the number with product
+5: return a tuple containing sum and product"
+"Let's think step by step
+Input: a: a string of 1s and 0s
+      b: a string of 1s and 0s
+Output: c: a string representing the binary XOR of a and b
+1: Initialize an empty string c to store the XOR result
+2: Ensure both input strings a and b are of the same length
+3: for each index i from 0 to the length of a - 1:
+4:     if the character at index i of a is equal to the character at index i of b:
+5:         Append '0' to c
+6:     else:
+7:         Append '1' to c
+8: return c"
+"Let's think step by step
+Input: strings: an array of strings
+Output: the longest string in the array or null if the array is empty
+1: Initialize a variable longest_str to null
+2: Initialize a variable max_length to 0
+3: for each string str in strings:
+4:     if the length of str is greater than max_length:
+5:         set longest_str to str
+6:         set max_length to the length of str
+7: return longest_str"
+"Let's think step by step
+Input: a, b: two integers
+Output: the greatest common divisor of a and b
+1: Initialize a variable gcd to 1
+2: Determine the smaller of the two numbers, a or b, and store it in variable smaller
+3: for each number i from 1 to smaller:
+4:     if a modulo i equals 0 and b modulo i equals 0:
+5:         set gcd to i
+6: return gcd"
+"Let's think step by step
+Input: numbers: a space-delimited string of numberals from 'zero' to 'nine'
+Output: a string with the numberals sorted from smallest to largest
+1: Create an associative array $numeral_to_digit to map numberals to their corresponding digits
+2: Split the input string $numbers into an array $numeral_array using space as the delimiter
+3: Initialize an empty array $digit_array to store the digits corresponding to the numberals
+4: for each numeral in $numeral_array:
+5:     Find the corresponding digit using $numeral_to_digit and add it to $digit_array
+6: Sort $digit_array in ascending order
+7: Initialize an empty array $sorted_numeral_array to store the sorted numberals
+8: for each digit in $digit_array:
+9:     Find the corresponding numeral using $numeral_to_digit and add it to $sorted_numeral_array
+10: Join the elements of $sorted_numeral_array into a single string $sorted_numbers using space as the delimiter
+11: return $sorted_numbers"
+"Let's think step by step
+Input: numbers: an array of numbers with at least two elements
+Output: an array where the smallest number becomes 0 and the largest becomes 1, with other numbers linearly transformed between 0 and 1
+1: Find the minimum value in the numbers array and store it in min_val
+2: Find the maximum value in the numbers array and store it in max_val
+3: Initialize an empty array named rescaled_numbers
+4: for each number in numbers:
+5:     Calculate the transformed value using the formula (number - min_val) / (max_val - min_val)
+6:     Add the transformed value to rescaled_numbers
+7: return rescaled_numbers"
+"Let's think step by step
+Input: string: a string with characters in both lowercase and uppercase
+Output: a string with the case of each character flipped
+1: Initialize an empty string named flipped_string
+2: for each character ch in string:
+3:     if ch is lowercase:
+4:         Convert ch to uppercase and append to flipped_string
+5:     else if ch is uppercase:
+6:         Convert ch to lowercase and append to flipped_string
+7:     else:
+8:         Append ch to flipped_string as it is (if it's not a letter)
+9: return flipped_string"
+"Let's think step by step
+Input: $l: an array of integers
+Output: an array of positive integers from $l
+1: Initialize an empty array named $positive_numbers
+2: for each number $num in $l:
+3:     if $num is greater than 0:
+4:         Add $num to $positive_numbers
+5: return $positive_numbers"
+"Let's think step by step
+Input: $n: an integer
+Output: a boolean indicating if $n is a prime number
+1: if $n is less than 2:
+2:     return false
+3: if $n is 2:
+4:     return true
+5: if $n is even:
+6:     return false
+7: for $i from 3 to square root of $n with a step of 2:
+8:     if $n is divisible by $i:
+9:         return false
+10: return true"
+"Let's think step by step
+Input: l: an array of integers
+Output: an array of sorted unique integers
+1: Initialize an empty array named unique_elements
+2: for each element in l:
+3:     if the element is not already in unique_elements:
+4:         add the element to unique_elements
+5: sort unique_elements in ascending order
+6: return unique_elements"
+"Let's think step by step
+Input: $n: an integer representing the n-th position of a number that is both a Fibonacci number and prime
+Output: the n-th prime Fibonacci number
+
+1: Initialize a counter to keep track of how many prime Fibonacci numbers have been found
+2: Initialize two variables to store the first two Fibonacci numbers (0 and 1)
+3: Loop until we find the n-th prime Fibonacci number:
+4:     Calculate the next Fibonacci number by adding the previous two Fibonacci numbers
+5:     Branch: if the next Fibonacci number is prime:
+6:         Increment the prime Fibonacci number counter
+7:         Branch: if the counter equals n:
+8:             Return the current Fibonacci number
+9:     Update the previous two Fibonacci numbers for the next iteration in the loop
+
+To determine if a number is prime:
+10: Function isPrime($number):
+11:     Branch: if $number is less than or equal to 1, return false
+12:     Loop from 2 to the square root of $number:
+13:         Branch: if $number is divisible by the current loop index, return false
+14:     Return true if no divisors were found"
+"Let's think step by step
+Input: $l: a list of integers
+Output: boolean: True if there are three distinct elements in the list that sum to zero, False otherwise
+1: Initialize the length of the list $l as $n
+2: if $n is less than 3:
+3:     return False
+4: Sort the list $l in ascending order
+5: for $i from 0 to $n - 2:
+6:     Let $left = $i + 1 and $right = $n - 1
+7:     while $left is less than $right:
+8:         Let $sum = $l[$i] + $l[$left] + $l[$right]
+9:         if $sum is equal to 0:
+10:             return True
+11:         else if $sum is less than 0:
+12:             Increment $left by 1
+13:         else:
+14:             Decrement $right by 1
+15: return False"
+"Let's think step by step
+Input: $l: an array of integers
+Output: a boolean value (True if there are two distinct elements in the list that sum to zero, False otherwise)
+1: Initialize an empty set named seen_numbers
+2: for each number num in $l:
+3:     Calculate the complement as -num
+4:     if complement is in seen_numbers:
+5:         return True
+6:     else:
+7:         add num to seen_numbers
+8: return False"
+"Let's think step by step
+Input: $n: an integer representing the position in the fib4 sequence
+Output: an integer representing the n-th element of the fib4 sequence
+1: if $n is 0, return 0
+2: if $n is 1, return 0
+3: if $n is 2, return 2
+4: if $n is 3, return 0
+5: Initialize an array named fib4_sequence with the first four elements: [0, 0, 2, 0]
+6: for each index i from 4 to $n:
+7:     calculate the next fib4 value as the sum of the previous four values in fib4_sequence
+8:     append the calculated value to fib4_sequence
+9: return the element at index $n in fib4_sequence"
+"Let's think step by step
+Input: l: an array of numbers
+Output: the median of the numbers in l
+1: Sort the array l in ascending order
+2: Determine the number of elements n in the sorted array l
+3: if n is odd:
+4:     return the element at the index n // 2
+5: else if n is even:
+6:     find the two middle elements at indices n // 2 - 1 and n // 2
+7:     calculate the average of these two middle elements
+8:     return the average"
+"Let's think step by step
+Input: text: a string
+Output: a boolean indicating whether the string is a palindrome
+1: Initialize two pointers: start at the beginning of the string and end at the end of the string
+2: while start is less than end:
+3:     if the character at start is not equal to the character at end:
+4:         return False
+5:     Increment start and decrement end
+6: return True"
+"Let's think step by step
+Input: text: a string
+Output: a string without vowels
+1: Define a function named removeVowels that takes a string $text as input
+2: Initialize a string $vowels containing all lowercase and uppercase vowels (""aeiouAEIOU"")
+3: Initialize an empty string $result to store the result
+4: for each character $char in $text:
+5:     if $char is not in $vowels:
+6:         Append $char to $result
+7: return $result"
+"Let's think step by step
+Input: $l: an array of numbers, $t: an integer threshold
+Output: a boolean value indicating if all numbers in $l are below $t
+1: Initialize a boolean variable allBelow to True
+2: for each number num in the array $l:
+3:     if num is greater than or equal to $t:
+4:         set allBelow to False
+5:         break out of the loop
+6: return allBelow"
+"Let's think step by step
+Input: $x and $y: two numbers
+Output: the sum of $x and $y
+1: Define a function named add that takes two parameters, $x and $y
+2: Calculate the sum of $x and $y
+3: Return the calculated sum"
+"Let's think step by step
+Input: s0: a string, s1: a string
+Output: a boolean indicating whether the two strings have the same characters
+
+1: Initialize an empty associative array $charCount to keep track of character frequencies
+2: for each character ch in s0:
+3:     if ch is in $charCount:
+4:         Increment the count of ch in $charCount
+5:     else:
+6:         Set the count of ch in $charCount to 1
+7: for each character ch in s1:
+8:     if ch is in $charCount:
+9:         Decrement the count of ch in $charCount
+10:        if the count of ch in $charCount is less than 0:
+11:            return False
+12:    else:
+13:        return False
+14: for each count in $charCount:
+15:     if count is not equal to 0:
+16:         return False
+17: return True"
+"Let's think step by step
+Input: n: an integer representing the position in the Fibonacci sequence
+Output: the n-th Fibonacci number
+1: Initialize a variable a to 0 (Fibonacci number at position 0)
+2: Initialize a variable b to 1 (Fibonacci number at position 1)
+3: if n is 0:
+4:     return a
+5: if n is 1:
+6:     return b
+7: Loop from 2 to n (inclusive):
+8:     Create a temporary variable temp and assign it the value of b
+9:     Update b to be the sum of a and b
+10:    Update a to be the value of temp
+11: return b"
+"Let's think step by step
+Input: $l1: first list of integers, $l2: second list of integers
+Output: a sorted array of unique common elements from both lists
+1: Initialize an empty array named $commonElements
+2: Create an associative array named $elementsCount to keep track of the occurrence of each element
+3: for each element $num in $l1:
+4:     if $num is not in $elementsCount:
+5:         set $elementsCount[$num] to 1
+6:     else:
+7:         increment $elementsCount[$num] by 1
+8: for each element $num in $l2:
+9:     if $num is in $elementsCount:
+10:        set $elementsCount[$num] to 2
+11: for each key $num in $elementsCount:
+12:     if $elementsCount[$num] equals 2:
+13:         append $num to $commonElements
+14: sort $commonElements in ascending order
+15: return $commonElements"
+"Let's think step by step
+Input: n: an integer greater than 1 and not a prime
+Output: the largest prime factor of n
+1: Initialize a variable largest_factor to hold the largest prime factor found
+2: Start with the smallest prime number, factor = 2
+3: while n is greater than 1:
+4:     while n is divisible by factor:
+5:         Set largest_factor to factor
+6:         Divide n by factor
+7:     Increment factor by 1
+8: return largest_factor"
+"Let's think step by step
+Input: $n: an integer
+Output: sum: the sum of all integers from 1 to $n
+1: Initialize a variable $sum to 0
+2: for each integer $i from 1 to $n:
+3:     Add $i to $sum
+4: return $sum"
+"Let's think step by step
+Input: xs: an array of coefficients representing a polynomial
+Output: an array of coefficients representing the derivative of the polynomial
+1: Initialize an empty array named derivative_coeffs to store the coefficients of the derivative
+2: for each coefficient at index i in xs starting from 1:
+   2.1: Calculate the derivative coefficient by multiplying the coefficient by its index i
+   2.2: Add the calculated derivative coefficient to the derivative_coeffs array
+3: return derivative_coeffs"
+"Let's think step by step
+Input: n: an integer representing the position in the fibfib sequence
+Output: the n-th element of the fibfib number sequence
+
+1: If n equals 0:
+2:     return 0
+3: If n equals 1:
+4:     return 0
+5: If n equals 2:
+6:     return 1
+
+7: Initialize an array fibfib_sequence with the first three elements [0, 0, 1]
+
+8: for i from 3 to n:
+9:     Calculate the next fibfib number as fibfib_sequence[i-1] + fibfib_sequence[i-2] + fibfib_sequence[i-3]
+10:    Append the calculated number to fibfib_sequence
+
+11: return the last element of fibfib_sequence which is fibfib(n)"
+"Let's think step by step
+Input: $s: a string representing a word
+Output: an integer representing the number of vowels in the string
+1: Initialize a counter variable named vowel_count to 0
+2: Convert the string $s to lowercase to handle case insensitivity
+3: Define a string $vowels containing all vowels 'aeiou'
+4: Loop through each character $ch in the string $s:
+5:     if $ch is in $vowels:
+6:         Increment vowel_count by 1
+7:     if $ch is 'y' and it is the last character in the string:
+8:         Increment vowel_count by 1
+9: return vowel_count"
+"Let's think step by step
+Input: $lst: a non-empty list of positive integers
+Output: the greatest integer that meets the criteria, or -1 if no such integer exists
+1: Initialize an empty associative array named $frequency to store the frequency of each integer
+2: for each integer $num in $lst:
+3:     if $num is already a key in $frequency:
+4:         Increment the value of $frequency[$num] by 1
+5:     else:
+6:         Set $frequency[$num] to 1
+7: Initialize a variable $result to -1 to store the greatest integer that meets the criteria
+8: for each key $num and value $count in $frequency:
+9:     if $count is greater than or equal to $num:
+10:        if $num is greater than $result:
+11:           Set $result to $num
+12: return $result"
+"Let's think step by step
+Input: a, b, c: lengths of the three sides of a triangle
+Output: area of the triangle rounded to 2 decimal points if valid, otherwise -1
+1: Check if the given sides form a valid triangle:
+   1.1: if (a + b > c) and (a + c > b) and (b + c > a):
+   1.2:     Calculate the semi-perimeter s = (a + b + c) / 2
+   1.3:     Calculate the area using Heron's formula: area = sqrt(s * (s - a) * (s - b) * (s - c))
+   1.4:     Round the area to 2 decimal points
+   1.5:     return the area
+2: if the sides do not form a valid triangle:
+   2.1:     return -1"
+"Let's think step by step
+Input: q: a list of integers, w: an integer representing the maximum possible weight
+Output: a boolean value indicating whether the object q will fly
+1: Initialize a boolean variable named is_balanced to True
+2: Check if q is a palindromic list:
+3:     Compare q with its reverse:
+4:         if they are not equal:
+5:             Set is_balanced to False
+6: Initialize a variable named total_weight to 0
+7: for each element element in q:
+8:     Add element to total_weight
+9: Check if total_weight is less than or equal to w:
+10:    if it is:
+11:        if is_balanced is True:
+12:            return True
+13: return False"
+"Let's think step by step
+Input: $a: an integer less than 100
+Output: a boolean indicating if $a is a multiplication of 3 prime numbers
+1: Initialize a list of prime numbers less than 100
+2: for each prime number p1 in the list:
+3:     for each prime number p2 in the list:
+4:         for each prime number p3 in the list:
+5:             if p1 * p2 * p3 equals $a:
+6:                 return true
+7: return false"
+"Let's think step by step
+Input: $decimal: a decimal number
+Output: a string representing the binary format with 'db' at the beginning and end
+1: Convert the decimal number to binary using PHP's built-in decbin() function
+2: Store the result in a variable named $binaryString
+3: Concatenate 'db' to the beginning of $binaryString
+4: Concatenate 'db' to the end of $binaryString
+5: return the modified $binaryString"
+"Let's think step by step
+Input: s: a string
+Output: a boolean indicating if the string is happy
+1: Check if the length of string s is less than 3:
+2:     If true, return False
+3: for i from 0 to length of s - 3 (inclusive):
+4:     Check if the characters at positions i, i+1, and i+2 are the same:
+5:         If true, return False
+6: Return True if no three consecutive characters are the same"
+"Let's think step by step
+Input: grades: an array of GPAs
+Output: an array of corresponding letter grades
+
+1: Initialize an empty array named letter_grades to store the letter grades
+2: for each gpa in grades:
+3:     if gpa is 4.0:
+4:         append 'A+' to letter_grades
+5:     else if gpa is greater than 3.7:
+6:         append 'A' to letter_grades
+7:     else if gpa is greater than 3.3:
+8:         append 'A-' to letter_grades
+9:     else if gpa is greater than 3.0:
+10:        append 'B+' to letter_grades
+11:    else if gpa is greater than 2.7:
+12:        append 'B' to letter_grades
+13:    else if gpa is greater than 2.3:
+14:        append 'B-' to letter_grades
+15:    else if gpa is greater than 2.0:
+16:        append 'C+' to letter_grades
+17:    else if gpa is greater than 1.7:
+18:        append 'C' to letter_grades
+19:    else if gpa is greater than 1.3:
+20:        append 'C-' to letter_grades
+21:    else if gpa is greater than 1.0:
+22:        append 'D+' to letter_grades
+23:    else if gpa is greater than 0.7:
+24:        append 'D' to letter_grades
+25:    else if gpa is greater than 0.0:
+26:        append 'D-' to letter_grades
+27:    else:
+28:        append 'E' to letter_grades
+29: return letter_grades"
+"Let's think step by step
+Input: $string: a string
+Output: a boolean indicating if the length of the string is a prime number
+1: Calculate the length of the string and store it in a variable, length
+2: if length is less than 2:
+3:     return False (since 0 and 1 are not prime numbers)
+4: for i from 2 to the integer square root of length:
+5:     if length is divisible by i:
+6:         return False (since length is divisible by a number other than 1 and itself)
+7: return True (since no divisors were found, length is prime)"
+"Let's think step by step
+Input: n: a positive integer
+Output: a string representing the binary number of the sum of digits of n
+1: Initialize a variable sum to 0
+2: Convert the integer n to a string to iterate over each digit
+3: for each character digit in the string representation of n:
+4:     Convert the character digit back to an integer
+5:     Add the integer value of digit to sum
+6: Convert the sum to a binary string
+7: return the binary string representation of the sum"
+"Let's think step by step
+Input: lst: a 2D array (nested list), x: an integer
+Output: a list of tuples, where each tuple represents the coordinate (row, column) of x in lst
+1: Initialize an empty array named coordinates
+2: for each row_index in the range of the number of rows in lst:
+3:     for each col_index in the range of the number of columns in the current row:
+4:         if the element at lst[row_index][col_index] is equal to x:
+5:             append the tuple (row_index, col_index) to coordinates
+6: sort coordinates first by row_index in ascending order, then by col_index in descending order
+7: return coordinates"
+"Let's think step by step
+Input: lst: a list of integers
+Output: the 2nd smallest integer in lst, or null if there is no such element
+1: If the length of lst is less than 2:
+2:     return null
+3: Initialize two variables, smallest and second_smallest, with infinity (or a very large number)
+4: for each number num in lst:
+5:     if num is less than smallest:
+6:         set second_smallest to smallest
+7:         set smallest to num
+8:     else if num is less than second_smallest and num is not equal to smallest:
+9:         set second_smallest to num
+10: if second_smallest is still infinity (or the large number initialized):
+11:     return null
+12: return second_smallest"
+"Let's think step by step
+Input: $s: a string containing words with sentences delimited by '.', '?', or '!'
+Output: count: the number of sentences starting with ""I""
+1: Initialize a variable count to 0
+2: Split the string $s into sentences using '.', '?', and '!' as delimiters
+3: Loop through each sentence:
+4:     Trim any leading or trailing whitespace from the sentence
+5:     if the sentence starts with ""I"":
+6:         Increment count by 1
+7: return count"
+"Let's think step by step
+Input: lst: a list of integers
+Output: the sum of the digits of the largest prime number in lst
+1: Initialize a variable max_prime to None
+2: for each number num in lst:
+3:     if num is a prime number:
+4:         if max_prime is None or num > max_prime:
+5:             max_prime = num
+6: if max_prime is None:
+7:     return 0
+8: Initialize a variable sum_of_digits to 0
+9: while max_prime > 0:
+10:     sum_of_digits = sum_of_digits + (max_prime % 10)
+11:     max_prime = floor division of max_prime by 10
+12: return sum_of_digits
+
+3: To check if num is a prime number:
+    a: if num is less than 2:
+        i: return False
+    b: for each i from 2 to the square root of num:
+        i: if num is divisible by i:
+            ii: return False
+    c: return True"
+"Let's think step by step
+Input: $dict: a dictionary with keys and values
+Output: a boolean value (True or False) based on the case of the keys
+1: Check if the dictionary is empty:
+2:     if it is empty:
+3:         return False
+4: Initialize two boolean variables, allLowerCase and allUpperCase, to True
+5: for each key in the dictionary:
+6:     if the key is not a string:
+7:         return False
+8:     if the key is not equal to its lowercase version:
+9:         set allLowerCase to False
+10:    if the key is not equal to its uppercase version:
+11:       set allUpperCase to False
+12: if allLowerCase is True or allUpperCase is True:
+13:     return True
+14: return False"
+"Let's think step by step
+Input: value: a string representing a number
+Output: the closest integer to the number, rounding away from zero if equidistant
+1: Convert the string value to a float named number
+2: Get the integer part of number by using floor function named lower_bound
+3: If number is positive:
+4:     Calculate the next integer named upper_bound as lower_bound + 1
+5:     Calculate the difference between number and lower_bound named diff_lower
+6:     Calculate the difference between upper_bound and number named diff_upper
+7:     if diff_lower is less than diff_upper:
+8:         return lower_bound
+9:     else:
+10:        return upper_bound
+11: else (number is negative):
+12:     Calculate the previous integer named upper_bound as lower_bound - 1
+13:     Calculate the difference between number and lower_bound named diff_lower
+14:     Calculate the difference between number and upper_bound named diff_upper
+15:     if diff_lower is less than diff_upper:
+16:         return lower_bound
+17:     else:
+18:        return upper_bound"
+"Let's think step by step
+Input: n: a positive integer
+Output: an array with the number of stones in each level, where the first element represents the number of stones in the first level
+1: Initialize an empty array named pile
+2: Set the number of stones in the first level to n
+3: for each level from 1 to n:
+4:     Add the current number of stones to the pile array
+5:     if n is odd:
+6:         Increase the number of stones by 2 to get the next odd number
+7:     else if n is even:
+8:         Increase the number of stones by 2 to get the next even number
+9: return pile"
+"Let's think step by step
+Input: $s: a string of words separated by commas or spaces
+Output: an array of words
+1: Remove any commas from the string $s by replacing them with spaces
+2: Trim any leading or trailing spaces from the string $s
+3: Split the string $s into an array of words using spaces as the delimiter
+4: Remove any empty elements from the resulting array (in case of multiple spaces)
+5: return the array of words"
+"Let's think step by step
+Input: x and y: two positive numbers
+Output: the biggest even integer in the range [x, y], or -1 if no such number exists
+1: Determine the smaller number s and the larger number l from the inputs x and y
+2: Initialize a variable biggest_even to -1
+3: for each number n from l down to s (inclusive):
+4:     if n is even:
+5:         set biggest_even to n
+6:         break the loop
+7: return biggest_even"
+"Let's think step by step
+Input: n: a positive integer, m: a positive integer
+Output: a binary string representing the rounded average of integers from n to m, or -1 if n > m
+1: if n is greater than m:
+2:     return -1
+3: Initialize sum to 0
+4: Initialize count to 0
+5: for each integer i from n to m (inclusive):
+6:     add i to sum
+7:     increment count by 1
+8: Calculate the average by dividing sum by count
+9: Round the average to the nearest integer
+10: Convert the rounded average to a binary string prefixed with ""0b""
+11: return the binary string"
+"Let's think step by step
+Input: $n: an integer representing the size of the list
+Output: a list of size $n where each element at index i is calculated as per the rules provided
+1: Initialize an empty array named $result
+2: for each number $i from 1 to $n (inclusive):
+3:     if $i is even:
+4:         Set $factorial to 1
+5:         for each number $j from 1 to $i:
+6:             Multiply $factorial by $j
+7:         Add $factorial to $result
+8:     else (if $i is odd):
+9:         Set $sum to 0
+10:        for each number $k from 1 to $i:
+11:            Add $k to $sum
+12:        Add $sum to $result
+13: return $result"
+"Let's think step by step
+Input: n: a positive integer
+Output: a tuple with the number of even and odd integer palindromes within the range (1, n), inclusive
+1: Initialize a counter even_count to 0
+2: Initialize a counter odd_count to 0
+3: for each integer i from 1 to n (inclusive):
+4:     Convert the integer i to a string named str_i
+5:     Check if str_i is the same forwards and backwards:
+6:         if it is:
+7:             if i is divisible by 2 (i.e., even):
+8:                 Increment even_count by 1
+9:             else:
+10:                Increment odd_count by 1
+11: return the tuple (even_count, odd_count)"
+"Let's think step by step
+Input: $arr: an array of N integers
+Output: a boolean indicating if the array can be sorted in non-decreasing order by performing right shift operations
+
+1: If the array $arr is empty:
+2:     return True
+3: Initialize a counter called $decrease_count to 0
+4: for each index $i from 0 to N-1:
+5:     if $arr[$i] > $arr[($i + 1) % N]:
+6:         increment $decrease_count by 1
+7:     if $decrease_count > 1:
+8:         return False
+9: return True
+
+Explanation of the logic:
+- If the array is empty, it is trivially sorted, so return True.
+- Traverse the array and check how many times the current element is greater than the next element (considering the array as circular, hence the modulo operation).
+- If this condition occurs more than once, it means the array cannot be sorted into non-decreasing order with right shifts.
+- If the condition occurs 0 or 1 times, the array can be sorted with right shifts, so return True."
+"Let's think step by step
+Input: $lst1: a list of numbers, $lst2: a list of numbers
+Output: ""YES"" if it's possible to make all elements of $lst1 even by exchanging elements with $lst2, otherwise ""NO""
+1: Initialize a boolean variable $canBeEven to false
+2: Loop through each number $num in $lst1:
+3:     If $num is odd:
+4:         Loop through each number $num2 in $lst2:
+5:             If $num2 is even:
+6:                 Set $canBeEven to true
+7:                 Break the inner loop
+8:         If $canBeEven is false:
+9:             Return ""NO""
+10: Return ""YES"""
+"Let's think step by step
+Input: s: a string, c: a string containing characters to delete
+Output: a tuple containing the result string after deletion and a boolean indicating if the result is a palindrome
+1: Initialize an empty string named result_string
+2: for each character ch in s:
+3:     if ch is not in c:
+4:         Add ch to result_string
+5: Initialize a boolean named is_palindrome as False
+6: Initialize a string named reversed_string as the reverse of result_string
+7: if result_string is equal to reversed_string:
+8:     Set is_palindrome to True
+9: return (result_string, is_palindrome)"
+"Let's think step by step
+Input: grid: a 2D array representing the wells, capacity: an integer representing the bucket capacity
+Output: an integer representing the number of times buckets need to be lowered
+1: Initialize a variable total_water to 0 to keep track of the total units of water in all wells
+2: Loop through each row in grid:
+3:     Initialize a variable row_water to 0 to keep track of the water in the current row
+4:     Loop through each element in the row:
+5:         If the element is 1, increment row_water by 1
+6:     Add row_water to total_water
+7: Initialize a variable bucket_uses to 0 to count the number of bucket uses
+8: While total_water is greater than 0:
+9:     Subtract capacity from total_water
+10:    Increment bucket_uses by 1
+11: If total_water is negative, decrement bucket_uses by 1 (because we subtracted more water than we had in the last iteration)
+12: Return bucket_uses"
+"Let's think step by step
+Input: s: a string, n: a natural number
+Output: a list of words from s that contain exactly n consonants
+1: Initialize an empty list named result
+2: Split the string s into words using space as a delimiter
+3: for each word in the list of words:
+4:     Initialize a counter consonant_count to 0
+5:     for each character ch in the word:
+6:         if ch is a consonant:
+7:             Increment consonant_count by 1
+8:     if consonant_count equals n:
+9:         Add the word to result
+10: return result"
+"Let's think step by step
+Input: $arr: an array of integers, $k: a positive integer
+Output: a sorted list of length $k with the maximum $k numbers in $arr
+1: Check if $k is 0:
+   1.1: If true, return an empty array
+2: Sort the array $arr in ascending order
+3: Initialize an empty array $result to store the maximum numbers
+4: for $i from the end of the sorted array to the position that leaves $k elements:
+   4.1: Append the element at position $i to $result
+5: Reverse the $result array to have it in descending order
+6: Return the $result array"
+"Let's think step by step
+Input: arr: a non-empty array of integers, k: an integer
+Output: sum of elements with at most two digits from the first k elements of arr
+1: Initialize a variable sum to 0
+2: for each index i from 0 to k-1:
+3:     if the absolute value of arr[i] is less than 100:
+4:         Add arr[i] to sum
+5: return sum"
+"Let's think step by step
+Input: $interval1: a pair of integers (start, end), $interval2: a pair of integers (start, end)
+Output: a string ""YES"" or ""NO"" indicating if the length of intersection is a prime number
+1: Extract start and end points from both intervals
+   1.1: $start1, $end1 = $interval1
+   1.2: $start2, $end2 = $interval2
+2: Determine the intersection of the two intervals
+   2.1: Calculate the maximum of the start points: $intersect_start = max($start1, $start2)
+   2.2: Calculate the minimum of the end points: $intersect_end = min($end1, $end2)
+3: Calculate the length of the intersection
+   3.1: If $intersect_start <= $intersect_end:
+       3.1.1: $intersection_length = $intersect_end - $intersect_start + 1
+   3.2: Else:
+       3.2.1: $intersection_length = 0
+4: Check if the intersection length is a prime number
+   4.1: Define a helper function to check for primality
+       4.1.1: A number is prime if it is greater than 1 and not divisible by any number other than 1 and itself
+       4.1.2: Loop from 2 to sqrt($intersection_length) to check divisibility
+       4.1.3: If any number divides $intersection_length, it is not prime
+   4.2: If $intersection_length is prime:
+       4.2.1: return ""YES""
+   4.3: Else:
+       4.3.1: return ""NO""
+5: Return ""NO"" if there is no intersection or if the intersection length is not prime"
+"Let's think step by step
+Input: n: a non-negative integer
+Output: a list of the first n + 1 numbers of the Tribonacci sequence
+1: Initialize an empty array named tribonacci_list
+2: If n is 0:
+3:     Add 1 to tribonacci_list
+4:     return tribonacci_list
+5: Add 1 to tribonacci_list (tri(0))
+6: Add 3 to tribonacci_list (tri(1))
+7: If n is 1:
+8:     return tribonacci_list
+9: If n is 2 or greater:
+10:    Add 2 to tribonacci_list (tri(2))
+11:    for i from 3 to n (inclusive):
+12:        If i is even:
+13:            Calculate tri(i) as 1 + i / 2
+14:        If i is odd:
+15:            Calculate tri(i) as tri(i - 1) + tri(i - 2) + tri(i + 1)
+16:        Add tri(i) to tribonacci_list
+17: return tribonacci_list"
+"Let's think step by step
+Input: n: a positive integer
+Output: the product of the odd digits in n, or 0 if all digits are even
+1: Initialize a variable product to 1
+2: Initialize a flag has_odd_digit to false
+3: Convert the integer n to a string to iterate over each digit
+4: for each character digit in the string representation of n:
+5:     Convert digit back to an integer
+6:     if the digit is odd:
+7:         Multiply product by the digit
+8:         Set has_odd_digit to true
+9: if has_odd_digit is true:
+10:    return product
+11: else:
+12:    return 0"
+"Let's think step by step
+Input: $string: a string containing only square brackets
+Output: a boolean indicating if there is a valid subsequence of nested brackets
+
+1: Initialize a counter named open_bracket_count to 0
+2: Initialize a boolean variable named found_nested to False
+3: for each character ch in $string:
+4:     if ch is an opening bracket '[':
+5:         increment open_bracket_count by 1
+6:     else if ch is a closing bracket ']':
+7:         if open_bracket_count is greater than 0:
+8:             decrement open_bracket_count by 1
+9:             if open_bracket_count is still greater than 0:
+10:                set found_nested to True
+11:        else:
+12:            return False (unmatched closing bracket)
+13: if open_bracket_count is not equal to 0:
+14:     return False (unmatched opening brackets)
+15: return found_nested"
+"Let's think step by step
+Input: $lst: a list of numbers
+Output: an integer representing the sum of squared numbers after rounding each element up to the nearest integer
+
+1: Initialize a variable named sum to 0
+2: for each number n in lst:
+3:     Round n up to the nearest integer using the ceil function
+4:     Square the rounded number
+5:     Add the squared number to sum
+6: return sum"
+"Let's think step by step
+Input: $txt: a string
+Output: a boolean value (True or False)
+1: Trim any whitespace from the end of the string
+2: Check if the string is empty:
+   a: If empty, return False
+3: Split the string into words using space as the delimiter
+4: Get the last word from the split result
+5: Check if the last word is a single character:
+   a: If not a single character, return False
+6: Check if the last character of the last word is an alphabetical character:
+   a: If it is an alphabetical character, return True
+   b: If it is not an alphabetical character, return False"
+"Let's think step by step
+Input: arr: an array of integers
+Output: the largest index of an element which is not greater than or equal to the element immediately preceding it, or -1 if no such element exists
+1: Initialize a variable largest_index to -1
+2: for i from 1 to length of arr - 1:
+3:     if arr[i] < arr[i - 1]:
+4:         set largest_index to i
+5: return largest_index"
+"Let's think step by step
+Input: lst: a list of integers
+Output: a tuple (a, b), where 'a' is the largest of negative integers, and 'b' is the smallest of positive integers
+1: Initialize variables largest_negative to None and smallest_positive to None
+2: for each number num in lst:
+   2.1: if num is less than 0:
+        2.1.1: if largest_negative is None or num is greater than largest_negative:
+             2.1.1.1: set largest_negative to num
+   2.2: if num is greater than 0:
+        2.2.1: if smallest_positive is None or num is less than smallest_positive:
+             2.2.1.1: set smallest_positive to num
+3: return a tuple (largest_negative, smallest_positive)"
+"Let's think step by step
+Input: n: an integer
+Output: the Brazilian factorial of n
+1: Initialize a variable brazilian_factorial_result to 1
+2: for each integer i from n down to 1:
+   2.1: Calculate the factorial of i (denoted as i!)
+   2.2: Multiply brazilian_factorial_result by i!
+3: return brazilian_factorial_result"
+"Let's think step by step
+Input: sentence: a string representing a sentence
+Output: a string containing words from the original sentence with prime number lengths
+1: Define a helper function is_prime(n) to check if a number n is prime
+   1.1: if n is less than 2, return False
+   1.2: for each number i from 2 to the square root of n:
+       1.2.1: if n is divisible by i, return False
+   1.3: return True
+2: Split the sentence into a list of words using space as a delimiter
+3: Initialize an empty list to store words with prime lengths
+4: for each word in the list of words:
+   4.1: if the length of the word is prime (using is_prime function):
+       4.1.1: add the word to the list of prime length words
+5: Join the list of prime length words into a single string with spaces between words
+6: return the resulting string"
+"Let's think step by step
+Input: x: a string representing a fraction, n: a string representing a fraction
+Output: True if x * n evaluates to a whole number, False otherwise
+1: Parse the fraction string x into numerator_x and denominator_x
+2: Parse the fraction string n into numerator_n and denominator_n
+3: Multiply the numerators together to get the new_numerator (numerator_x * numerator_n)
+4: Multiply the denominators together to get the new_denominator (denominator_x * denominator_n)
+5: Check if the new_numerator is divisible by the new_denominator without a remainder:
+6:     if new_numerator % new_denominator == 0:
+7:         return True
+8:     else:
+9:         return False"
+"Let's think step by step
+Input: nums: an array of integers
+Output: an array of integers sorted by the sum of their digits, maintaining original order for ties
+1: Define a function named orderByPoints that takes an array of integers nums as input
+2: Create a function to calculate the sum of digits of a number:
+   2.1 Convert the number to its absolute value
+   2.2 Convert the number to a string
+   2.3 Initialize a variable sum_digits to 0
+   2.4 for each character in the string representation of the number:
+   2.5     Convert the character back to an integer and add it to sum_digits
+   2.6 Return sum_digits
+3: Create an array of tuples where each tuple contains:
+   3.1 The sum of digits of the number (using the function created in step 2)
+   3.2 The index of the number in the original array nums
+   3.3 The number itself
+4: Sort the array of tuples first by the sum of digits (ascending), then by the original index (ascending)
+5: Extract the original numbers from the sorted array of tuples
+6: Return the sorted array of numbers
+
+Branch for handling empty input:
+If nums is empty:
+   Return an empty array
+
+Loop for calculating sum of digits and creating tuples:
+For each number in nums:
+   Calculate the sum of its digits
+   Store the tuple (sum_of_digits, index, number) in an array
+
+Loop for extracting numbers after sorting:
+For each tuple in the sorted array of tuples:
+   Extract the number and add it to the result array
+
+Return the result array"
+"Let's think step by step
+Input: nums: an array of numbers
+Output: count of numbers greater than 10 with both first and last digits odd
+1: Initialize a counter to 0
+2: for each number num in nums:
+3:     if num is greater than 10:
+4:         Convert num to string to access first and last digits
+5:         Get the first digit
+6:         Get the last digit
+7:         if both first and last digits are odd (1, 3, 5, 7, 9):
+8:             Increment the counter by 1
+9: return the counter"
+"Let's think step by step
+Input: n: a positive integer
+Output: an integer representing the number of valid triples (a[i], a[j], a[k]) where i < j < k and a[i] + a[j] + a[k] is a multiple of 3
+1: Initialize an array a of length n
+2: for each i from 1 to n:
+3:     Set a[i] = i * i - i + 1
+4: Initialize a counter count to 0
+5: for each i from 0 to n-3:
+6:     for each j from i+1 to n-2:
+7:         for each k from j+1 to n-1:
+8:             If (a[i] + a[j] + a[k]) is divisible by 3:
+9:                 Increment count by 1
+10: return count"
+"Let's think step by step
+Input: planet1: a string, planet2: a string
+Output: a tuple of planet names between planet1 and planet2 sorted by proximity to the sun
+1: Define the order of planets in an array named solar_system_order
+2: Initialize an empty array named planets_between
+3: Check if both planet1 and planet2 are in solar_system_order:
+   a: If either planet is not in solar_system_order, return an empty tuple
+4: Find the index of planet1 and planet2 in solar_system_order:
+   a: Assign index of planet1 to planet1_index
+   b: Assign index of planet2 to planet2_index
+5: Determine the lower and higher index between planet1_index and planet2_index:
+   a: Assign the smaller index to lower_index
+   b: Assign the larger index to higher_index
+6: Loop through the solar_system_order array starting from lower_index + 1 to higher_index - 1:
+   a: For each planet in this range, add it to the planets_between array
+7: Convert the planets_between array to a tuple
+8: Return the tuple of planets_between"
+"Let's think step by step
+Input: n: an integer, x: an integer, y: an integer
+Output: the value of x if n is a prime number, otherwise the value of y
+1: Define a function xOrY that takes three parameters: n, x, and y
+2: Create a function is_prime to check if a number is prime:
+   2.1: if n is less than 2:
+       2.1.1: return False
+   2.2: for each number i from 2 to the square root of n:
+       2.2.1: if n is divisible by i:
+           2.2.1.1: return False
+   2.3: return True
+3: Call the is_prime function with n as the argument
+4: if the result of is_prime is True:
+   4.1: return x
+5: else:
+   5.1: return y"
+"Let's think step by step
+Input: lst: a list of numbers
+Output: the sum of squares of the odd numbers in lst that are non-negative
+1: Initialize a variable sum_of_squares to 0
+2: for each number num in lst:
+3:     if num is an integer:
+4:         if num is non-negative:
+5:             if num is odd:
+6:                 add the square of num to sum_of_squares
+7: return sum_of_squares"
+"Let's think step by step
+Input: 
+- $classname: a string representing the name of a class
+- $extensions: an array of strings representing the extensions
+Output: a string in the format ClassName.StrongestExtensionName
+1: Initialize variables to keep track of the strongest extension and its strength
+    1.1: strongest_extension = null
+    1.2: max_strength = a very small number (or negative infinity)
+2: for each extension in $extensions:
+    2.1: Initialize counters for uppercase (CAP) and lowercase (SM) letters
+        2.1.1: CAP = 0
+        2.1.2: SM = 0
+    2.2: for each character in the extension:
+        2.2.1: if the character is uppercase:
+            2.2.1.1: Increment CAP by 1
+        2.2.2: else if the character is lowercase:
+            2.2.2.1: Increment SM by 1
+    2.3: Calculate the strength of the current extension
+        2.3.1: strength = CAP - SM
+    2.4: if strength is greater than max_strength:
+        2.4.1: Update strongest_extension with the current extension
+        2.4.2: Update max_strength with the current strength
+3: Return the formatted string combining $classname and strongest_extension
+    3.1: return $classname . '.' . strongest_extension"
+"Let's think step by step
+Input: $a: a string, $b: a string
+Output: a boolean indicating if any rotation of $b is a substring in $a
+1: Initialize a variable is_substring as False
+2: if length of $b is greater than length of $a, return is_substring (False)
+3: for i from 0 to length of $b - 1:
+4:     Rotate $b to the right by i positions to get rotated_b
+5:     if rotated_b is a substring of $a:
+6:         Set is_substring to True
+7:         break the loop
+8: return is_substring"
+"Let's think step by step
+Input: number: a positive integer (1 <= number <= 1000)
+Output: a string representing the roman numeral equivalent in lowercase
+1: Initialize an empty string named roman_numeral
+2: Create an associative array named roman_map with integer keys and corresponding roman numeral values:
+   {
+       1000 => 'm',
+       900 => 'cm',
+       500 => 'd',
+       400 => 'cd',
+       100 => 'c',
+       90 => 'xc',
+       50 => 'l',
+       40 => 'xl',
+       10 => 'x',
+       9 => 'ix',
+       5 => 'v',
+       4 => 'iv',
+       1 => 'i'
+   }
+3: loop through each key-value pair in roman_map:
+4:     while number is greater than or equal to the key:
+5:         append the value to roman_numeral
+6:         subtract the key from number
+7: return roman_numeral"
+"Let's think step by step
+Input: $a, $b, $c: lengths of the three sides of a triangle
+Output: a boolean indicating whether the sides form a right-angled triangle
+1: Sort the sides so that we can identify the largest side easily
+2: Assign the sorted sides to variables $x, $y, $z where $z is the largest
+3: Check if the square of the largest side ($z) is equal to the sum of the squares of the other two sides ($x, $y)
+4:     if ($z * $z == $x * $x + $y * $y):
+5:         return True (indicating a right-angled triangle)
+6:     else:
+7:         return False (indicating not a right-angled triangle)"
+"Let's think step by step
+Input: s: a string
+Output: a modified string based on the given conditions
+1: Initialize an empty string named modified_string
+2: flag = False (to check if there are any letters in the string)
+3: for each character ch in s:
+4:     if ch is a letter:
+5:         flag = True
+6:         if ch is lowercase:
+7:             convert ch to uppercase
+8:         else:
+9:             convert ch to lowercase
+10:     append the transformed or original ch to modified_string
+11: if flag is False (no letters in the string):
+12:     reverse the modified_string
+13: return modified_string"
+"Let's think step by step
+Input: text: a string
+Output: md5 hash of the string or null if the string is empty
+1: Check if the input string 'text' is empty:
+2:     if it is empty:
+3:         return null
+4:     if it is not empty:
+5:         calculate the md5 hash of the string 'text'
+6:         return the calculated md5 hash"
+"Let's think step by step
+Input: a and b, two positive integers
+Output: an array of even digits between a and b in ascending order
+1: Ensure a is less than or equal to b, if not swap them
+2: Initialize an empty array named even_digits_array
+3: for each number num from a to b (inclusive):
+4:     if num is even:
+5:         add num to even_digits_array
+6: return even_digits_array"

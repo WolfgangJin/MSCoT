@@ -1,0 +1,1057 @@
+"Let's think step by step
+Input: operations: a list of deposit and withdrawal operations (positive and negative integers)
+Output: a boolean value indicating if the balance falls below zero at any point
+1: Initialize a variable balance to 0
+2: for each operation in operations:
+3:     Add the operation value to balance
+4:     if balance is less than 0:
+5:         return True
+6: if the loop completes without balance falling below 0:
+7:     return False"
+"Let's think step by step
+Input: numbers: a list of integers
+Output: a tuple (sum, product) where sum is the sum of all integers and product is the product of all integers in the list
+1: Initialize sum to 0
+2: Initialize product to 1
+3: for each number in numbers:
+4:     Add number to sum
+5:     Multiply product by number
+6: return the tuple (sum, product)"
+"Let's think step by step
+Input: a: binary string, b: binary string
+Output: result: a binary string representing the XOR of a and b
+1: Initialize an empty string named result
+2: Ensure both strings a and b are of the same length
+3: for each index i from 0 to length of a - 1:
+4:     if character at position i in a is equal to character at position i in b:
+5:         Append '0' to result
+6:     else:
+7:         Append '1' to result
+8: return result"
+"Let's think step by step
+Input: strings: a list of strings
+Output: the longest string from the list or ""none"" if the list is empty
+1: Check if the list strings is empty:
+   1.1: If true, return ""none""
+2: Initialize a variable longest_str to store the longest string found so far
+   2.1: Set longest_str to the first string in the list (assuming the list is not empty)
+3: for each string str in strings:
+   3.1: Check if the length of str is greater than the length of longest_str:
+       3.1.1: If true, update longest_str to str
+4: return longest_str"
+"Let's think step by step
+Input: a: an integer, b: an integer
+Output: the greatest common divisor of a and b
+1: while b is not equal to 0:
+2:     Set remainder to a modulo b
+3:     Set a to b
+4:     Set b to remainder
+5: return a"
+"Let's think step by step
+Input: numbers: a space-delimited string of numberals from 'zero' to 'nine'
+Output: a string with numbers sorted from smallest to largest
+1: Create a mapping of numberals to their corresponding digit values
+2: Split the input string numbers into an array of numberals
+3: Convert each numeral in the array to its corresponding digit value using the mapping
+4: Sort the array of digit values in ascending order
+5: Convert each digit value back to its corresponding numeral using the mapping
+6: Join the sorted array of numerals into a single string separated by spaces
+7: Return the sorted string"
+"Let's think step by step
+Input: numbers: a list of numbers (at least two elements)
+Output: a list of numbers rescaled such that the smallest number becomes 0 and the largest becomes 1
+1: Find the minimum value in the list of numbers
+2: Find the maximum value in the list of numbers
+3: Initialize an empty list named rescaled_numbers
+4: for each number in numbers:
+5:     Apply the linear transformation: (number - min_value) / (max_value - min_value)
+6:     Add the transformed number to rescaled_numbers
+7: return rescaled_numbers"
+"Let's think step by step
+Input: string: a string with mixed case characters
+Output: a new string with each character's case flipped
+1: Initialize an empty string named flipped_string
+2: for each character ch in string:
+3:     if ch is lowercase:
+4:         Convert ch to uppercase and add it to flipped_string
+5:     else if ch is uppercase:
+6:         Convert ch to lowercase and add it to flipped_string
+7:     else:
+8:         Add ch to flipped_string as is (for non-alphabetic characters)
+9: return flipped_string"
+"Let's think step by step
+Input: l: a list of numbers
+Output: a list containing only the positive numbers from l
+1: Initialize an empty list named positive_numbers
+2: for each number n in l:
+3:     if n is greater than 0:
+4:         Add n to positive_numbers
+5: return positive_numbers"
+"Let's think step by step
+Input: n: an integer
+Output: boolean: true if n is a prime number, false otherwise
+1: if n is less than 2:
+2:     return false
+3: if n is 2:
+4:     return true
+5: if n is even:
+6:     return false
+7: for i from 3 to the square root of n (inclusive) with a step of 2:
+8:     if n is divisible by i:
+9:         return false
+10: return true"
+"Let's think step by step
+Input: l: a list of integers
+Output: a sorted list of unique integers
+1: Initialize an empty set named unique_elements_set
+2: for each element in l:
+3:     Add the element to unique_elements_set (duplicates are automatically handled by set properties)
+4: Convert the set unique_elements_set to a list named unique_elements_list
+5: Sort the list unique_elements_list
+6: return unique_elements_list"
+"Let's think step by step
+Input: n: an integer representing the n-th number that is both a Fibonacci number and prime
+Output: the n-th number that is both a Fibonacci number and prime
+1: Define a helper function isPrime(num) to check if a number is prime
+    1.1: if num is less than 2, return false
+    1.2: for i from 2 to the square root of num:
+        1.2.1: if num is divisible by i, return false
+    1.3: return true
+2: Define a helper function isFibonacci(num) to check if a number is a Fibonacci number
+    2.1: initialize a and b as the first two Fibonacci numbers, 0 and 1
+    2.2: while b is less than num:
+        2.2.1: update a to b, and b to a + b
+    2.3: return b equals num
+3: Initialize a counter to keep track of how many prime Fibonacci numbers have been found, set to 0
+4: Initialize a variable currentNumber to start checking numbers from, set to 2 (the first prime number)
+5: while the counter is less than n:
+    5.1: if currentNumber is both a prime number and a Fibonacci number:
+        5.1.1: increment the counter by 1
+        5.1.2: if the counter equals n:
+            5.1.2.1: return currentNumber
+    5.2: increment currentNumber by 1"
+"Let's think step by step
+Input: l: a list of integers
+Output: True if there are three distinct elements that sum to zero, False otherwise
+1: If the length of l is less than 3:
+2:     return False
+3: Sort the list l
+4: for each index i from 0 to length of l - 2:
+5:     Initialize two pointers, left = i + 1 and right = length of l - 1
+6:     while left is less than right:
+7:         Calculate the sum = l[i] + l[left] + l[right]
+8:         if sum is equal to 0:
+9:             return True
+10:        if sum is less than 0:
+11:            Increment left by 1
+12:        else:
+13:            Decrement right by 1
+14: return False"
+"Let's think step by step
+Input: l: a list of integers
+Output: a boolean indicating if there are two distinct elements in the list that sum to zero
+1: Initialize an empty set named seen_numbers
+2: for each number num in l:
+3:     Calculate the complement as -num
+4:     if complement is in seen_numbers:
+5:         return True
+6:     Add num to seen_numbers
+7: return False"
+"Let's think step by step
+Input: n: an integer representing the position in the Fib4 sequence
+Output: the n-th element of the Fib4 sequence
+1: If n is 0, return 0
+2: If n is 1, return 0
+3: If n is 2, return 2
+4: If n is 3, return 0
+5: Initialize an array fib4_values with the first four values: [0, 0, 2, 0]
+6: for i from 4 to n:
+7:     Calculate the next value in the sequence as the sum of the previous four values: fib4_values[i-1] + fib4_values[i-2] + fib4_values[i-3] + fib4_values[i-4]
+8:     Append this value to fib4_values
+9: return the last element in fib4_values (fib4_values[n])"
+"Let's think step by step
+Input: l: a list of numbers
+Output: the median of the numbers in the list
+1: Sort the list l in non-decreasing order
+2: Determine if the number of elements in l is odd:
+3:     if true:
+4:         return the middle element of the sorted list
+5:     else:
+6:         find the two middle elements of the sorted list
+7:         calculate the average of the two middle elements
+8:         return the calculated average"
+"Let's think step by step
+Input: text: a string
+Output: a boolean value indicating if the string is a palindrome
+1: Initialize two pointers, one at the start (left) and one at the end (right) of the string
+2: while left pointer is less than the right pointer:
+3:     if characters at left and right pointers are not the same:
+4:         return False
+5:     move left pointer one step to the right
+6:     move right pointer one step to the left
+7: return True"
+"Let's think step by step
+Input: text: a string
+Output: a string with vowels removed
+1: Initialize an empty string named result
+2: Define a set of vowels named vowels_set containing 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'
+3: for each character ch in text:
+4:     if ch is not in vowels_set:
+5:         Add ch to result
+6: return result"
+"Let's think step by step
+Input: l: a list of numbers, t: a threshold number
+Output: a boolean indicating if all numbers in l are below t
+1: Initialize a flag all_below to True
+2: for each number num in l:
+3:     if num is greater than or equal to t:
+4:         set all_below to False
+5:         break
+6: return all_below"
+"Let's think step by step
+Input: x: a number, y: a number
+Output: the sum of x and y
+1: Define a function named add that takes two parameters, x and y
+2: Inside the function, calculate the sum of x and y
+3: Return the calculated sum"
+"Let's think step by step
+Input: s0: a string, s1: a string
+Output: a boolean indicating if s0 and s1 have the same characters with the same frequency
+1: Create two empty objects (dictionaries) named charCount0 and charCount1
+2: for each character char in s0:
+3:     if char is not in charCount0:
+4:         add char to charCount0 with a value of 1
+5:     else:
+6:         increment the value of char in charCount0 by 1
+7: for each character char in s1:
+8:     if char is not in charCount1:
+9:         add char to charCount1 with a value of 1
+10:    else:
+11:        increment the value of char in charCount1 by 1
+12: if the number of keys in charCount0 is not equal to the number of keys in charCount1:
+13:    return False
+14: for each key in charCount0:
+15:     if the value of key in charCount0 is not equal to the value of key in charCount1:
+16:         return False
+17: return True"
+"Let's think step by step
+Input: n: an integer representing the position in the Fibonacci sequence
+Output: the n-th Fibonacci number
+1: if n is 0:
+2:     return 0
+3: if n is 1:
+4:     return 1
+5: Initialize a variable a to 0
+6: Initialize a variable b to 1
+7: for i from 2 to n (inclusive):
+8:     Initialize temp to the value of b
+9:     Set b to a + b
+10:    Set a to the value of temp
+11: return b"
+"Let's think step by step
+Input: l1: a list of elements, l2: another list of elements
+Output: a sorted list of unique elements that are common to both l1 and l2
+1: Initialize an empty set named common_elements
+2: for each element e in l1:
+3:     if e is also in l2:
+4:         add e to common_elements
+5: Convert common_elements to a list
+6: Sort the list of common elements
+7: return the sorted list"
+"Let's think step by step
+Input: n: an integer greater than 1 that is not a prime
+Output: the largest prime factor of n
+1: Initialize a variable largest_factor to None
+2: Start a loop with a divisor variable starting at 2
+3: While n is greater than 1:
+4:     If n is divisible by the divisor:
+5:         Set n to n divided by the divisor
+6:         Set largest_factor to the divisor
+7:     Else:
+8:         Increment the divisor by 1
+9: Return largest_factor"
+"Let's think step by step
+Input: n: an integer
+Output: the sum of all integers from 1 to n
+1: Initialize a variable sum to 0
+2: for each integer i from 1 to n:
+3:     Add i to sum
+4: return sum"
+"Let's think step by step
+Input: xs: an array of coefficients representing a polynomial
+Output: an array of coefficients representing the derivative of the polynomial
+1: Initialize an empty array named derivative_coeffs to store the coefficients of the derivative
+2: for each coefficient coeff in xs starting from the second element (index 1):
+3:     Multiply coeff by its power (which is its index in the array)
+4:     Add the result to derivative_coeffs
+5: return derivative_coeffs"
+"Let's think step by step
+Input: n: an integer representing the position in the FibFib sequence
+Output: the n-th element of the FibFib sequence
+1: if n is 0:
+2:     return 0
+3: else if n is 1:
+4:     return 0
+5: else if n is 2:
+6:     return 1
+7: else:
+8:     Initialize an array named fibfib_numbers with size n+1
+9:     Set fibfib_numbers[0] to 0
+10:    Set fibfib_numbers[1] to 0
+11:    Set fibfib_numbers[2] to 1
+12:    for i from 3 to n:
+13:       Calculate fibfib_numbers[i] as fibfib_numbers[i-1] + fibfib_numbers[i-2] + fibfib_numbers[i-3]
+14:    return fibfib_numbers[n]"
+"Let's think step by step
+Input: s: a string representing a word
+Output: the number of vowels in the string
+1: Initialize a count variable to 0
+2: Define a set of vowels including 'a', 'e', 'i', 'o', 'u'
+3: for each character ch in the string s (converted to lowercase):
+4:     if ch is in the set of vowels:
+5:         increment the count by 1
+6:     else if ch is 'y' and it is the last character of the string:
+7:         increment the count by 1
+8: return the count"
+"Let's think step by step
+Input: lst: a non-empty list of positive integers
+Output: the greatest integer with frequency greater than or equal to the value of the integer itself, or -1 if no such value exists
+1: Initialize an empty dictionary named frequency_dict
+2: for each number num in lst:
+3:     if num is a key in frequency_dict:
+4:         increment the value of num in frequency_dict by 1
+5:     else:
+6:         add num as a key to frequency_dict with value 1
+7: Initialize a variable max_value to -1
+8: for each key num in frequency_dict:
+9:     if the value of num in frequency_dict is greater than or equal to num:
+10:        if num is greater than max_value:
+11:           max_value = num
+12: return max_value"
+"Let's think step by step
+Input: a, b, c: the lengths of the three sides of a triangle
+Output: area of the triangle rounded to 2 decimal points if valid, otherwise -1
+1: Check if the three sides form a valid triangle:
+2:     if a + b > c and a + c > b and b + c > a:
+3:         Calculate the semi-perimeter s = (a + b + c) / 2
+4:         Calculate the area using Heron's formula: area = sqrt(s * (s - a) * (s - b) * (s - c))
+5:         Round the area to 2 decimal points
+6:         return the rounded area
+7:     else:
+8:         return -1"
+"Let's think step by step
+Input: q: a list of numbers, w: a maximum possible weight
+Output: True if q is balanced (palindromic) and the sum of its elements is less than or equal to w, False otherwise
+1: Check if q is balanced:
+2:     Initialize two pointers, one at the start (left) and one at the end (right) of the list q
+3:     while left pointer is less than right pointer:
+4:         if element at left pointer is not equal to element at right pointer:
+5:             return False
+6:         move left pointer one step to the right
+7:         move right pointer one step to the left
+8: Calculate the sum of elements in q
+9: if sum of elements in q is less than or equal to w:
+10:    return True
+11: return False"
+"Let's think step by step
+Input: a: an integer less than 100
+Output: true if a is the product of exactly 3 prime numbers, false otherwise
+1: Create a list of prime numbers less than 100
+2: for each combination of three prime numbers (p1, p2, p3) in the list:
+3:     Calculate the product of p1, p2, and p3
+4:     if the product is equal to a:
+5:         return true
+6: return false"
+"Let's think step by step
+Input: decimal: a number in decimal form
+Output: a string in binary format with 'db' at the beginning and end
+1: Initialize an empty string named binary_str
+2: Convert the decimal number to binary:
+   2.1: while decimal is greater than 0:
+       2.1.1: Calculate the remainder of decimal divided by 2 (this will be 0 or 1)
+       2.1.2: Prepend the remainder to binary_str
+       2.1.3: Update decimal to be the integer division of decimal by 2
+3: Add 'db' to the beginning of binary_str
+4: Add 'db' to the end of binary_str
+5: return binary_str"
+"Let's think step by step
+Input: s: a string
+Output: a boolean value indicating if the string is happy or not
+1: Check if the length of the string s is less than 3:
+2:     If true, return False as the string cannot be happy
+3:     If false, proceed to the next step
+4: for each index i from 0 to length of s - 3 (inclusive):
+5:     Check if the characters at positions i, i+1, and i+2 are distinct:
+6:         If false, return False as the string is not happy
+7: If the loop completes without returning False, return True indicating the string is happy"
+"Let's think step by step
+Input: grades: a list of GPAs (floating point numbers)
+Output: a list of letter grades corresponding to the GPAs
+1: Initialize an empty list named letter_grades
+2: for each gpa in grades:
+3:     if gpa is exactly 4.0:
+4:         Append 'A+' to letter_grades
+5:     else if gpa is greater than 3.7:
+6:         Append 'A' to letter_grades
+7:     else if gpa is greater than 3.3:
+8:         Append 'A-' to letter_grades
+9:     else if gpa is greater than 3.0:
+10:        Append 'B+' to letter_grades
+11:    else if gpa is greater than 2.7:
+12:        Append 'B' to letter_grades
+13:    else if gpa is greater than 2.3:
+14:        Append 'B-' to letter_grades
+15:    else if gpa is greater than 2.0:
+16:        Append 'C+' to letter_grades
+17:    else if gpa is greater than 1.7:
+18:        Append 'C' to letter_grades
+19:    else if gpa is greater than 1.3:
+20:        Append 'C-' to letter_grades
+21:    else if gpa is greater than 1.0:
+22:        Append 'D+' to letter_grades
+23:    else if gpa is greater than 0.7:
+24:        Append 'D' to letter_grades
+25:    else if gpa is greater than 0.0:
+26:        Append 'D-' to letter_grades
+27:    else:
+28:        Append 'E' to letter_grades
+29: return letter_grades"
+"Let's think step by step
+Input: string: a string
+Output: Boolean: True if the length of the string is a prime number, False otherwise
+1: Calculate the length of the input string and store it in a variable named length
+2: Define a function to check if a number is prime:
+   2.1: If the number is less than 2, return False
+   2.2: If the number is 2, return True
+   2.3: If the number is even, return False
+   2.4: For each odd number i from 3 to the square root of the number:
+        2.4.1: If the number is divisible by i, return False
+   2.5: Return True
+3: Use the prime checking function to check if length is a prime number
+4: Return the result of the prime checking function"
+"Let's think step by step
+Input: n: a positive integer
+Output: a binary string representing the sum of the digits of n
+1: Initialize a variable sum to 0
+2: Convert the integer n to a string to iterate over each digit
+3: for each character digit in the string representation of n:
+4:     Convert the character digit back to an integer
+5:     Add the integer value of digit to sum
+6: Convert the sum to a binary string
+7: Return the binary string
+
+Detailed Chain:
+1: Initialize a variable sum to 0 to store the sum of the digits
+2: Convert the integer n to its string representation to easily access each digit
+3: Loop through each character in the string representation of n:
+    4.1: Convert the character (which is a digit) back to an integer
+    4.2: Add this integer to the variable sum
+5: After the loop, convert the sum of digits to its binary representation using a conversion function or method
+6: Return the binary string as the output"
+"Let's think step by step
+Input: lst: a 2D list (nested lists), x: an integer
+Output: a list of tuples, each tuple is a coordinate (row, column) where x is found in lst
+1: Initialize an empty list named coordinates
+2: for each row_index in the range of the length of lst:
+3:     for each col_index in the range of the length of lst[row_index]:
+4:         if lst[row_index][col_index] is equal to x:
+5:             append the tuple (row_index, col_index) to coordinates
+6: sort the coordinates list:
+7:     first by row_index in ascending order
+8:     then by col_index in descending order for rows with the same row_index
+9: return coordinates"
+"Let's think step by step
+Input: lst: a list of integers
+Output: the 2nd smallest element of the list or None if it doesn't exist
+1: if the length of lst is less than 2:
+2:     return None
+3: Initialize a variable smallest to infinity
+4: Initialize a variable second_smallest to infinity
+5: for each num in lst:
+6:     if num is less than smallest:
+7:         set second_smallest to smallest
+8:         set smallest to num
+9:     else if num is less than second_smallest and num is not equal to smallest:
+10:        set second_smallest to num
+11: if second_smallest is still infinity:
+12:     return None
+13: return second_smallest"
+"Let's think step by step
+Input: s: a string containing sentences
+Output: count: number of sentences starting with ""I""
+1: Initialize a variable count to 0
+2: Split the string s into sentences using delimiters '.', '?', '!'
+3: for each sentence in the list of sentences:
+4:     Trim leading and trailing whitespace from the sentence
+5:     if the sentence starts with ""I"":
+6:         increment count by 1
+7: return count"
+"Let's think step by step
+Input: lst: a list of integers
+Output: sum of the digits of the largest prime number in lst
+1: Initialize a variable largest_prime to None
+2: for each number num in lst:
+3:     if num is a prime number:
+4:         if largest_prime is None or num > largest_prime:
+5:             largest_prime = num
+6: if largest_prime is not None:
+7:     result = sum of the digits of largest_prime
+8:     return result
+9: else:
+10:     return 0
+
+Details:
+- num is a prime number if it is greater than 1 and cannot be divided by any number other than 1 and itself
+- Sum of the digits of a number can be found by converting the number to a string, iterating through each character, converting it back to an integer, and summing these integers."
+"Let's think step by step
+Input: dict: a dictionary with keys of various types and cases
+Output: a boolean indicating if all string keys are either in lower case or upper case
+1: if dict is empty:
+2:     return False
+3: Initialize two flags, allLower to True and allUpper to True
+4: for each key in dict:
+5:     if key is not a string:
+6:         return False
+7:     if key is not in lower case:
+8:         set allLower to False
+9:     if key is not in upper case:
+10:        set allUpper to False
+11: if allLower is True or allUpper is True:
+12:     return True
+13: return False"
+"Let's think step by step
+Input: value: a string representing a number
+Output: the closest integer to the value, rounding away from zero if equidistant
+1: Convert the string value to a floating-point number named num
+2: Determine the floor of num as floor_num
+3: Determine the ceiling of num as ceil_num
+4: Calculate the distance from num to floor_num as dist_to_floor
+5: Calculate the distance from num to ceil_num as dist_to_ceil
+6: if dist_to_floor is less than dist_to_ceil:
+7:     return floor_num
+8: else if dist_to_ceil is less than dist_to_floor:
+9:     return ceil_num
+10: else (if dist_to_floor is equal to dist_to_ceil):
+11:     if num is greater than 0:
+12:         return ceil_num
+13:     else:
+14:         return floor_num"
+"Let's think step by step
+Input: n: a positive integer
+Output: a list of integers representing the number of stones in each level
+1: Initialize an empty list named stone_pile
+2: Set the current number of stones to n
+3: for i from 0 to n-1:
+4:     Add the current number of stones to stone_pile
+5:     if n is odd:
+6:         Increment the current number of stones by 2 (to get the next odd number)
+7:     else:
+8:         Increment the current number of stones by 2 (to get the next even number)
+9: return stone_pile"
+"Let's think step by step
+Input: s: a string of words separated by commas or spaces
+Output: an array of words
+1: Initialize an empty array named words_array
+2: Replace all commas in the string s with spaces to unify the separators
+3: Split the modified string s by spaces to get an array of words
+4: for each word in the resulting array:
+5:     if the word is not an empty string (to handle multiple spaces or trailing spaces):
+6:         Add the word to words_array
+7: return words_array"
+"Let's think step by step
+Input: x, y: two positive numbers
+Output: the biggest even integer in the range [x, y] inclusive, or -1 if no such number exists
+1: if x is greater than y:
+2:     return -1
+3: Initialize max_even to -1
+4: for each number num from y down to x:
+5:     if num is even:
+6:         set max_even to num
+7:         break
+8: return max_even"
+"Let's think step by step
+Input: n: a positive integer, m: a positive integer
+Output: a binary string representing the rounded average of integers from n to m, or -1 if n > m
+1: if n is greater than m:
+2:     return -1
+3: Initialize a variable sum to 0
+4: Initialize a variable count to 0
+5: for each integer i from n to m (inclusive):
+6:     add i to sum
+7:     increment count by 1
+8: Calculate the average of sum divided by count
+9: Round the average to the nearest integer
+10: Convert the rounded average to a binary string
+11: return the binary string"
+"Let's think step by step
+Input: n: an integer representing the size of the list
+Output: a list of integers where each element at index i is the factorial of i if i is even or the sum of numbers from 1 to i if i is odd
+1: Initialize an empty list named result
+2: for i from 1 to n (inclusive):
+3:     if i is even:
+4:         Initialize a variable factorial to 1
+5:         for j from 1 to i (inclusive):
+6:             Multiply factorial by j
+7:         Add factorial to result
+8:     else (i is odd):
+9:         Initialize a variable sum to 0
+10:        for j from 1 to i (inclusive):
+11:            Add j to sum
+12:        Add sum to result
+13: return result"
+"Let's think step by step
+Input: n: a positive integer
+Output: a tuple with the number of even and odd integer palindromes within the range (1, n)
+1: Initialize a counter for even palindromes, even_count, to 0
+2: Initialize a counter for odd palindromes, odd_count, to 0
+3: for each integer num in the range from 1 to n (inclusive):
+4:     Convert num to a string to check if it is a palindrome
+5:     if the string of num is the same forwards and backwards (palindrome check):
+6:         if num is divisible by 2:
+7:             Increment even_count by 1
+8:         else:
+9:             Increment odd_count by 1
+10: return a tuple with even_count and odd_count"
+"Let's think step by step
+Input: arr: an array of N unique integers
+Output: True if the array can be sorted in non-decreasing order by performing right shift operations, otherwise False
+1: If arr is empty:
+2:     return True
+3: Initialize a sorted version of arr named sorted_arr
+4: for i from 0 to length of arr - 1:
+5:     Create a right shifted version of arr by i positions named shifted_arr
+6:     if shifted_arr is equal to sorted_arr:
+7:         return True
+8: return False"
+"Let's think step by step
+Input: lst1: a list of numbers, lst2: a list of numbers
+Output: ""YES"" or ""NO"" based on whether lst1 can be made all even by exchanging elements with lst2
+1: Initialize a variable has_odd_in_lst1 to False
+2: for each number num in lst1:
+3:     if num is odd:
+4:         set has_odd_in_lst1 to True
+5:         break
+6: if has_odd_in_lst1 is False:
+7:     return ""YES""
+8: Initialize a variable has_even_in_lst2 to False
+9: for each number num in lst2:
+10:    if num is even:
+11:        set has_even_in_lst2 to True
+12:        break
+13: if has_even_in_lst2 is True:
+14:     return ""YES""
+15: return ""NO"""
+"Let's think step by step
+Input: s: a string, c: a string containing characters to be deleted from s
+Output: a tuple containing the modified string and a boolean indicating if it's a palindrome
+1: Initialize an empty string result to store the characters of s that are not in c
+2: for each character ch in s:
+3:     if ch is not in c:
+4:         Add ch to result
+5: Initialize isPalindrome to True
+6: for i from 0 to the length of result divided by 2:
+7:     if the character at position i in result is not equal to the character at position length of result - i - 1 in result:
+8:         Set isPalindrome to False
+9:         break
+10: return (result, isPalindrome)"
+"Let's think step by step
+Input: grid: a 2D array representing wells, capacity: an integer representing bucket capacity
+Output: an integer representing the number of times buckets need to be lowered
+1: Initialize a variable totalWater to 0
+2: for each row in grid:
+3:     for each cell in row:
+4:         if cell contains water (i.e., cell value is 1):
+5:             Increment totalWater by 1
+6: Calculate the number of times to lower the bucket:
+7:     Divide totalWater by capacity and round up to the nearest whole number (since any remaining water less than a full bucket's capacity still requires a bucket dip)
+8: return the calculated number of bucket dips"
+"Let's think step by step
+Input: s: a string, n: a natural number
+Output: a list of words from string s that contain exactly n consonants
+1: Initialize an empty list named result to store the words that meet the criteria
+2: Define a string named consonants containing all consonant letters (both uppercase and lowercase)
+3: Split the string s into a list of words named words_list
+4: for each word in words_list:
+5:     Initialize a counter named consonant_count to 0
+6:     for each character ch in word:
+7:         if ch is a consonant (i.e., ch is in consonants):
+8:             Increment consonant_count by 1
+9:     if consonant_count is equal to n:
+10:        Append the word to the result list
+11: return the result list"
+"Let's think step by step
+Input: arr: an array of integers, k: a positive integer
+Output: a sorted list of length k with the maximum k numbers in arr
+1: Initialize an empty list named max_numbers
+2: Sort the array arr in ascending order
+3: for i from length of arr - 1 to length of arr - k (inclusive), step -1:
+4:     Append arr[i] to max_numbers
+5: Return max_numbers"
+"Let's think step by step
+Input: arr: a non-empty array of integers, k: an integer
+Output: sum of elements with at most two digits from the first k elements of arr
+1: Initialize a variable sum to 0
+2: for each element num in the first k elements of arr:
+3:     if the absolute value of num is less than 100:
+4:         add num to sum
+5: return sum"
+"Let's think step by step
+Input: interval1: a pair of integers (start1, end1), interval2: a pair of integers (start2, end2)
+Output: a string ""YES"" if the length of the intersection of the intervals is a prime number, otherwise ""NO""
+
+1: Calculate the start and end of the intersection of interval1 and interval2
+2:     Set intersection_start as the maximum of start1 and start2
+3:     Set intersection_end as the minimum of end1 and end2
+4: Check if the intervals intersect
+5:     if intersection_start is greater than intersection_end:
+6:         return ""NO""
+7: Calculate the length of the intersection
+8:     Set intersection_length as intersection_end - intersection_start + 1
+9: Check if the intersection_length is a prime number
+10:     if intersection_length is less than 2:
+11:         return ""NO""
+12:     for each number i from 2 to the square root of intersection_length:
+13:         if intersection_length is divisible by i:
+14:             return ""NO""
+15: Return ""YES"" if no divisors were found
+16: return ""YES"""
+"Let's think step by step
+Input: n: a non-negative integer
+Output: a list of the first n + 1 numbers of the Tribonacci sequence
+1: Initialize an empty list named tribonacci_sequence
+2: if n is 0:
+3:     append 1 to tribonacci_sequence
+4:     return tribonacci_sequence
+5: else:
+6:     append 1 to tribonacci_sequence (tri(0))
+7:     append 3 to tribonacci_sequence (tri(1))
+8:     if n is 1:
+9:         return tribonacci_sequence
+10:    else:
+11:        if n is 2:
+12:            append 2 to tribonacci_sequence (tri(2))
+13:            return tribonacci_sequence
+14:        else:
+15:            append 2 to tribonacci_sequence (tri(2))
+16:            for i from 3 to n:
+17:                if i is even:
+18:                    calculate tri(i) as 1 + i / 2
+19:                    append tri(i) to tribonacci_sequence
+20:                else:
+21:                    calculate tri(i) as tribonacci_sequence[i - 1] + tribonacci_sequence[i - 2] + tribonacci_sequence[i + 1]
+22:                    append tri(i) to tribonacci_sequence
+23: return tribonacci_sequence
+
+Let's correct the logic as there are some errors in the definition of tri(n) for odd n:
+1: Initialize an empty list named tribonacci_sequence
+2: append 1 to tribonacci_sequence (tri(0))
+3: append 3 to tribonacci_sequence (tri(1))
+4: if n is 0:
+5:     return [1]
+6: else if n is 1:
+7:     return tribonacci_sequence
+8: else:
+9:     append 2 to tribonacci_sequence (tri(2))
+10:    for i from 3 to n:
+11:        if i is even:
+12:            calculate tri(i) as 1 + i / 2
+13:            append tri(i) to tribonacci_sequence
+14:        else:
+15:            calculate tri(i) as tribonacci_sequence[i - 1] + tribonacci_sequence[i - 2] + tribonacci_sequence[i - 3]
+16:            append tri(i) to tribonacci_sequence
+17: return tribonacci_sequence"
+"Let's think step by step
+Input: n: a positive integer
+Output: product of the odd digits in n, or 0 if all digits are even
+1: Initialize a variable product and set it to 1
+2: Initialize a variable has_odd_digit and set it to false
+3: Convert the integer n to a string to iterate over each digit
+4: for each character ch in the string representation of n:
+5:     Convert ch back to an integer
+6:     if the integer is odd:
+7:         Multiply product by the integer
+8:         Set has_odd_digit to true
+9: if has_odd_digit is true:
+10:    Return product
+11: else:
+12:    Return 0"
+"Let's think step by step
+Input: string: a string containing only square brackets
+Output: True if there is at least one nested bracket, False otherwise
+1: Initialize a counter to track open brackets
+2: Initialize a boolean variable to track if nesting has occurred
+3: for each character ch in string:
+4:     if ch is an open bracket '[':
+5:         increment counter by 1
+6:     else if ch is a close bracket ']':
+7:         if counter is greater than 1:
+8:             set boolean variable to True (indicating nesting)
+9:         if counter is greater than 0:
+10:            decrement counter by 1
+11:        else:
+12:            return False (unmatched close bracket)
+13: if counter is not equal to 0:
+14:     return False (unmatched open brackets)
+15: return the boolean variable (True if nesting occurred, False otherwise)"
+"Let's think step by step
+Input: lst: a list of numbers
+Output: a number representing the sum of squares of the ceiling values of the numbers in lst
+1: Initialize a variable sum to 0
+2: for each number num in lst:
+3:     Apply the ceiling function to num to round it up to the nearest integer
+4:     Square the result of the ceiling function
+5:     Add the squared value to sum
+6: return sum"
+"Let's think step by step
+Input: txt: a string
+Output: a boolean indicating if the last character is an alphabetical character and not part of a word
+1: Trim any trailing spaces from the string txt
+2: if the trimmed string is empty:
+3:     return False
+4: Split the trimmed string into words based on spaces, creating a list of words
+5: Get the last word from the list of words
+6: if the last word is a single character and that character is alphabetical:
+7:     return True
+8: return False"
+"Let's think step by step
+Input: arr: an array of distinct integers
+Output: the largest index of an element which is not greater than or equal to the element immediately preceding it, or -1 if no such element exists
+1: Initialize a variable max_index to -1, this will store the largest index found
+2: for each index i from 1 to length of arr - 1:
+3:     if arr[i] is less than arr[i-1]:
+4:         set max_index to i
+5: return max_index"
+"Let's think step by step
+Input: lst: a list of integers
+Output: a tuple (a, b), where 'a' is the largest of negative integers, and 'b' is the smallest of positive integers in lst
+1: Initialize a variable largest_negative as None
+2: Initialize a variable smallest_positive as None
+3: for each num in lst:
+4:     if num is less than 0:
+5:         if largest_negative is None or num is greater than largest_negative:
+6:             set largest_negative to num
+7:     else if num is greater than 0:
+8:         if smallest_positive is None or num is less than smallest_positive:
+9:             set smallest_positive to num
+10: return a tuple (largest_negative, smallest_positive)"
+"Let's think step by step
+Input: n: an integer greater than 0
+Output: the brazilian factorial of n
+1: Initialize a variable to store the result, starting with a value of 1
+2: for each integer i from 1 to n (inclusive):
+3:     Initialize a variable to store the factorial of i, starting with a value of 1
+4:     for each integer j from 1 to i (inclusive):
+5:         Multiply the factorial of i by j
+6:     Multiply the result by the factorial of i
+7: return the result"
+"Let's think step by step
+Input: sentence: a string representing a sentence
+Output: a string containing words from the original sentence whose lengths are prime numbers
+
+1: Split the sentence into a list of words
+2: Initialize an empty list to store words with prime lengths
+3: for each word in the list of words:
+4:     Calculate the length of the word
+5:     if the length is a prime number:
+6:         add the word to the list of words with prime lengths
+7: Join the list of words with prime lengths into a single string with spaces
+8: return the resulting string
+
+To determine if a number is prime:
+9: If the number is less than 2, return False
+10: for each integer i from 2 to the square root of the number:
+11:     if the number is divisible by i:
+12:         return False
+13: return True"
+"Let's think step by step
+Input: x: a string representing a fraction, n: a string representing a fraction
+Output: boolean: True if x * n is a whole number, False otherwise
+1: Parse the fraction string x into numerator_x and denominator_x
+2: Parse the fraction string n into numerator_n and denominator_n
+3: Multiply the numerators together to get the product_numerator (numerator_x * numerator_n)
+4: Multiply the denominators together to get the product_denominator (denominator_x * denominator_n)
+5: if product_numerator is divisible by product_denominator without a remainder:
+6:     return True
+7: else:
+8:     return False"
+"Let's think step by step
+Input: nums: a list of integers
+Output: a list of integers sorted by the sum of their digits, maintaining original order for ties
+1: Define a helper function digit_sum to calculate the sum of digits of a number
+   1.1: Convert the number to a string and remove any negative sign
+   1.2: Initialize a sum variable to zero
+   1.3: for each character in the string:
+         1.3.1: Convert the character to an integer
+         1.3.2: Add the integer to the sum
+   1.4: Return the sum
+2: Create a new list of tuples, where each tuple contains a number from nums and its digit sum
+3: Sort the list of tuples based on the second element (digit sum) of the tuples, using a stable sort to maintain original order for ties
+4: Extract the numbers from the sorted list of tuples
+5: Return the extracted numbers as the result"
+"Let's think step by step
+Input: nums: an array of numbers
+Output: count: number of elements greater than 10 with both first and last digits odd
+1: Initialize a counter to zero
+2: for each number num in nums:
+3:     if num is greater than 10:
+4:         Convert num to a string to easily access first and last digits
+5:         Determine the first and last digits of num
+6:         Check if both first and last digits are odd:
+7:             if true, increment the counter
+8: return the counter"
+"Let's think step by step
+Input: n: a positive integer
+Output: count: the number of triples (a[i], a[j], a[k]) where i < j < k and a[i] + a[j] + a[k] is a multiple of 3
+1: Initialize an array a of length n
+2: for each i from 1 to n:
+3:     Calculate a[i] = i * i - i + 1
+4: Initialize a counter count to 0
+5: for each i from 0 to n-3:
+6:     for each j from i+1 to n-2:
+7:         for each k from j+1 to n-1:
+8:             Calculate the sum sum_ijk = a[i] + a[j] + a[k]
+9:             if sum_ijk is divisible by 3:
+10:                Increment count by 1
+11: return count"
+"Let's think step by step
+Input: planet1: a string representing a planet name, planet2: a string representing a planet name
+Output: a tuple containing planet names between the orbits of planet1 and planet2, sorted by proximity to the sun, or an empty tuple if invalid planet names are given
+1: Define a list of planets in the order of their proximity to the sun
+2: Check if both planet1 and planet2 are in the planets list
+3: If either planet1 or planet2 is not in the planets list, return an empty tuple
+4: Find the index of planet1 in the planets list
+5: Find the index of planet2 in the planets list
+6: If the index of planet1 is less than the index of planet2:
+   6.1: Create a sublist of planets between planet1 and planet2
+7: Else:
+   7.1: Create a sublist of planets between planet2 and planet1
+8: Convert the sublist to a tuple
+9: Return the tuple"
+"Let's think step by step
+Input: n: an integer, x: a value, y: a value
+Output: x if n is a prime number, otherwise y
+1: Define a function xOrY with parameters n, x, y
+2: Initialize a variable is_prime to true
+3: if n is less than 2:
+4:     set is_prime to false
+5: else:
+6:     for i from 2 to the square root of n (inclusive):
+7:         if n is divisible by i:
+8:             set is_prime to false
+9:             break
+10: if is_prime is true:
+11:     return x
+12: else:
+13:     return y"
+"Let's think step by step
+Input: lst: a list of numbers
+Output: sum: the sum of squares of odd numbers in lst that are non-negative integers
+1: Initialize a variable sum to 0
+2: for each number num in lst:
+3:     if num is a non-negative integer and num is odd:
+4:         Calculate the square of num
+5:         Add the square to sum
+6: return sum"
+"Let's think step by step
+Input: classname: a string, extensions: a list of extension strings
+Output: a string in the format ClassName.StrongestExtensionName
+1: Initialize variables to keep track of the strongest extension and its strength
+   - strongest_extension: set to None
+   - max_strength: set to a very low number (or negative infinity)
+2: for each extension in extensions:
+   1: Initialize counters for uppercase (CAP) and lowercase (SM) letters
+   2: for each character in extension:
+      1: if character is uppercase:
+         1: increment CAP
+      2: else if character is lowercase:
+         1: increment SM
+   3: Calculate the strength of the current extension as CAP - SM
+   4: if the current extension's strength is greater than max_strength:
+      1: Update strongest_extension to the current extension
+      2: Update max_strength to the current extension's strength
+3: return the formatted string combining classname and strongest_extension"
+"Let's think step by step
+Input: a: a string, b: a string
+Output: True if b or any of its rotations is a substring in a, otherwise False
+1: for each possible rotation of b:
+2:     if the current rotation is a substring of a:
+3:         return True
+4: return False
+
+Detailed Steps:
+1: Initialize the variable n with the length of string b
+2: for i from 0 to n-1:
+3:     Create a rotation of b by taking the substring from i to end of b and appending the substring from start of b to i (b[i:] + b[:i])
+4:     if the current rotation is found in a:
+5:         return True
+6: if no rotation of b is found in a:
+7:     return False"
+"Let's think step by step
+Input: number: a positive integer (1 <= number <= 1000)
+Output: a string representing the roman numeral equivalent of the number in lowercase
+1: Create a dictionary named roman_numerals with the following mappings:
+   - 1000 -> 'm'
+   - 900 -> 'cm'
+   - 500 -> 'd'
+   - 400 -> 'cd'
+   - 100 -> 'c'
+   - 90 -> 'xc'
+   - 50 -> 'l'
+   - 40 -> 'xl'
+   - 10 -> 'x'
+   - 9 -> 'ix'
+   - 5 -> 'v'
+   - 4 -> 'iv'
+   - 1 -> 'i'
+2: Initialize an empty string named result to store the roman numeral representation
+3: for each value, symbol pair in roman_numerals:
+4:     while number is greater than or equal to value:
+5:         Append symbol to result
+6:         Subtract value from number
+7: return result"
+"Let's think step by step
+Input: a, b, c: lengths of the three sides of a triangle
+Output: boolean: True if the sides form a right-angled triangle, False otherwise
+1: Sort the sides a, b, c to ensure the longest side is last (c should be the largest)
+2: if the sum of the squares of the two smaller sides equals the square of the largest side:
+3:     return True
+4: else:
+5:     return False"
+"Let's think step by step
+Input: s: a string
+Output: a string with case-reversed letters or reversed if no letters
+1: Initialize a variable `hasLetters` to false
+2: Initialize an empty array `result`
+3: for each character ch in s:
+4:     if ch is a letter:
+5:         set `hasLetters` to true
+6:         if ch is uppercase:
+7:             convert ch to lowercase and add to `result`
+8:         else:
+9:             convert ch to uppercase and add to `result`
+10:     else:
+11:         add ch to `result`
+12: if `hasLetters` is false:
+13:     reverse the order of elements in `result`
+14: join the elements of `result` into a single string
+15: return the resulting string"
+"Let's think step by step
+Input: text: a string
+Output: a string representing the md5 hash of text, or ""none"" if text is empty
+1: Check if the text is an empty string:
+2:     if text is empty:
+3:         return ""none""
+4: Otherwise:
+5:     Import the md5 hashing library
+6:     Generate the md5 hash of the text
+7:     Convert the hash to a hexadecimal string
+8:     return the hexadecimal string"
+"Let's think step by step
+Input: a: positive integer, b: positive integer
+Output: an array of even digits between a and b, in ascending order
+1: Ensure a is less than or equal to b, if not, swap a and b
+2: Initialize an empty array named even_digits
+3: for each number num from a to b (inclusive):
+4:     if num is even:
+5:         add num to even_digits
+6: return even_digits"
